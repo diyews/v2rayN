@@ -74,6 +74,7 @@
             this.menuAddServers2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuScanScreen2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCopyPACUrl = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuReloadHttp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.bgwScan = new System.ComponentModel.BackgroundWorker();
@@ -385,6 +386,7 @@
             this.menuAddServers2,
             this.menuScanScreen2,
             this.menuCopyPACUrl,
+            this.menuReloadHttp,
             this.toolStripSeparator2,
             this.menuExit});
             this.cmsMain.Name = "contextMenuStrip1";
@@ -455,6 +457,12 @@
             this.menuCopyPACUrl.Name = "menuCopyPACUrl";
             resources.ApplyResources(this.menuCopyPACUrl, "menuCopyPACUrl");
             this.menuCopyPACUrl.Click += new System.EventHandler(this.menuCopyPACUrl_Click);
+            //
+            // menuReloadHttp
+            //
+            this.menuReloadHttp.Name = "menuReloadHttp";
+            resources.ApplyResources(this.menuReloadHttp, "tsbReloadHttp");
+            this.menuReloadHttp.Click += new System.EventHandler(this.tsbReloadHttp_Click);
             // 
             // toolStripSeparator2
             // 
@@ -827,6 +835,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuGlobalPAC;
         private System.Windows.Forms.ToolStripMenuItem menuKeep;
         private System.Windows.Forms.ToolStripMenuItem menuCopyPACUrl;
+        private System.Windows.Forms.ToolStripMenuItem menuReloadHttp;
         private System.Windows.Forms.ToolStripMenuItem menuAddCustomServer;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem menuAddShadowsocksServer;
