@@ -33,6 +33,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lvServers = new v2rayN.Base.ListViewFlickerFree();
             this.cmsLv = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuEditServer = new System.Windows.Forms.ToolStripMenuItem(); 
             this.menuAddVmessServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddShadowsocksServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddSocksServer = new System.Windows.Forms.ToolStripMenuItem();
@@ -169,6 +170,8 @@
             // 
             this.cmsLv.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsLv.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuSetDefaultServer,
+            this.menuEditServer,
             this.menuAddVmessServer,
             this.menuAddShadowsocksServer,
             this.menuAddSocksServer,
@@ -179,7 +182,6 @@
             this.menuRemoveServer,
             this.menuRemoveDuplicateServer,
             this.menuCopyServer,
-            this.menuSetDefaultServer,
             this.toolStripSeparator3,
             this.menuMoveTop,
             this.menuMoveUp,
@@ -223,6 +225,12 @@
             this.menuAddCustomServer.Name = "menuAddCustomServer";
             resources.ApplyResources(this.menuAddCustomServer, "menuAddCustomServer");
             this.menuAddCustomServer.Click += new System.EventHandler(this.menuAddCustomServer_Click);
+            //
+            // menuEditServer
+            //
+            this.menuEditServer.Name = "menuEditServer";
+            resources.ApplyResources(this.menuEditServer, "menuEditServer");
+            this.menuEditServer.Click += new System.EventHandler(this.menuEditServer_Click);
             // 
             // menuAddServers
             // 
@@ -808,6 +816,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuServers;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ContextMenuStrip cmsLv;
+        private System.Windows.Forms.ToolStripMenuItem menuEditServer;
         private System.Windows.Forms.ToolStripMenuItem menuAddVmessServer;
         private System.Windows.Forms.ToolStripMenuItem menuRemoveServer;
         private System.Windows.Forms.ToolStripMenuItem menuSetDefaultServer;
