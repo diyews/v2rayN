@@ -107,6 +107,7 @@
             this.tsbCheckUpdateN = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbCheckUpdateCore = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbCheckUpdatePACList = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbCheckClearPACList = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbHelp = new System.Windows.Forms.ToolStripDropDownButton();
@@ -114,10 +115,9 @@
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbLanguageDef = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbLanguageZhHans = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbPromotion = new System.Windows.Forms.ToolStripButton();
+            this.tsbReloadHttp = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -594,7 +594,7 @@
             this.tsbCheckUpdate,
             this.toolStripSeparator10,
             this.tsbHelp,
-            this.tsbPromotion,
+            this.tsbReloadHttp,
             this.toolStripSeparator11,
             this.tsbClose});
             resources.ApplyResources(this.tsMain, "tsMain");
@@ -684,6 +684,11 @@
             resources.ApplyResources(this.tsbCheckUpdatePACList, "tsbCheckUpdatePACList");
             this.tsbCheckUpdatePACList.Click += new System.EventHandler(this.tsbCheckUpdatePACList_Click);
             // 
+            // toolStripSeparator13
+            // 
+            this.toolStripSeparator13.Name = "toolStripSeparator13";
+            resources.ApplyResources(this.toolStripSeparator13, "toolStripSeparator13");
+            // 
             // tsbCheckClearPACList
             // 
             this.tsbCheckClearPACList.Name = "tsbCheckClearPACList";
@@ -729,13 +734,13 @@
             resources.ApplyResources(this.tsbLanguageZhHans, "tsbLanguageZhHans");
             this.tsbLanguageZhHans.Click += new System.EventHandler(this.tsbLanguageZhHans_Click);
             // 
-            // tsbPromotion
+            // tsbReloadHttp
             // 
-            this.tsbPromotion.ForeColor = System.Drawing.Color.Black;
-            this.tsbPromotion.Image = global::v2rayN.Properties.Resources.promotion;
-            resources.ApplyResources(this.tsbPromotion, "tsbPromotion");
-            this.tsbPromotion.Name = "tsbPromotion";
-            this.tsbPromotion.Click += new System.EventHandler(this.tsbPromotion_Click);
+            this.tsbReloadHttp.ForeColor = System.Drawing.Color.Black;
+            this.tsbReloadHttp.Image = global::v2rayN.Properties.Resources.restart;
+            this.tsbReloadHttp.Name = "tsbReloadHttp";
+            resources.ApplyResources(this.tsbReloadHttp, "tsbReloadHttp");
+            this.tsbReloadHttp.Click += new System.EventHandler(this.tsbReloadHttp_Click);
             // 
             // toolStripSeparator11
             // 
@@ -747,11 +752,6 @@
             resources.ApplyResources(this.tsbClose, "tsbClose");
             this.tsbClose.Name = "tsbClose";
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
-            // 
-            // toolStripSeparator13
-            // 
-            this.toolStripSeparator13.Name = "toolStripSeparator13";
-            resources.ApplyResources(this.toolStripSeparator13, "toolStripSeparator13");
             // 
             // MainForm
             // 
@@ -858,7 +858,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
         private System.Windows.Forms.ToolStripMenuItem tsbLanguageDef;
         private System.Windows.Forms.ToolStripMenuItem tsbLanguageZhHans;
-        private System.Windows.Forms.ToolStripButton tsbPromotion;
+        private System.Windows.Forms.ToolStripButton tsbReloadHttp;
         private System.Windows.Forms.ToolStripMenuItem menuAddSocksServer;
         private System.Windows.Forms.StatusStrip ssMain;
         private System.Windows.Forms.ToolStripStatusLabel toolSslSocksPort;
