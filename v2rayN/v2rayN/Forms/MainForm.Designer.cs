@@ -79,7 +79,7 @@
             this.menuAddServers2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuScanScreen2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCopyPACUrl = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuUpdateSubscriptions = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuReloadHttp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.bgwScan = new System.ComponentModel.BackgroundWorker();
@@ -415,7 +415,7 @@
             this.menuAddServers2,
             this.menuScanScreen2,
             this.menuCopyPACUrl,
-            this.menuUpdateSubscriptions,
+            this.menuReloadHttp,
             this.toolStripSeparator2,
             this.menuExit});
             this.cmsMain.Name = "contextMenuStrip1";
@@ -501,11 +501,11 @@
             resources.ApplyResources(this.menuCopyPACUrl, "menuCopyPACUrl");
             this.menuCopyPACUrl.Click += new System.EventHandler(this.menuCopyPACUrl_Click);
             // 
-            // menuUpdateSubscriptions
+            // menuReloadHttp
             // 
-            this.menuUpdateSubscriptions.Name = "menuUpdateSubscriptions";
-            resources.ApplyResources(this.menuUpdateSubscriptions, "menuUpdateSubscriptions");
-            this.menuUpdateSubscriptions.Click += new System.EventHandler(this.menuUpdateSubscriptions_Click);
+            resources.ApplyResources(this.menuReloadHttp, "menuReloadHttp");
+            this.menuReloadHttp.Name = "menuReloadHttp";
+            this.menuReloadHttp.Click += new System.EventHandler(this.tsbReloadHttp_Click);
             // 
             // toolStripSeparator2
             // 
@@ -945,7 +945,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuRealPingServer;
         private System.Windows.Forms.ToolStripMenuItem menuNotEnabledHttp;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
-        private System.Windows.Forms.ToolStripMenuItem menuUpdateSubscriptions;
         private System.Windows.Forms.ToolStripMenuItem tsbV2rayWebsite;
         private System.Windows.Forms.ToolStripMenuItem menuKeepNothing;
         private System.Windows.Forms.ToolStripMenuItem menuKeepPACNothing;
@@ -954,6 +953,7 @@
         private System.Windows.Forms.ToolStripButton tsbQRCodeSwitch;
         private System.Windows.Forms.ToolStripMenuItem menuAddVlessServer;
         private System.Windows.Forms.ToolStripMenuItem menuAddTrojanServer;
+        private System.Windows.Forms.ToolStripMenuItem menuReloadHttp;
     }
 }
 
