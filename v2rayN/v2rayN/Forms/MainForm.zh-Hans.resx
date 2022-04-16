@@ -522,6 +522,9 @@
   <data name="tsbClose.Text" xml:space="preserve">
     <value>  关闭窗口  </value>
   </data>
+  <data name="menuEditServer.Text" xml:space="preserve">
+    <value>编辑 (E)</value>
+  </data>
   <data name="menuReloadHttp.Text" xml:space="preserve">
     <value>重启Http</value>
   </data>

@@ -33,6 +33,8 @@
             this.scMain = new System.Windows.Forms.SplitContainer();
             this.lvServers = new v2rayN.Base.ListViewFlickerFree();
             this.cmsLv = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuSetDefaultServer = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEditServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddVmessServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddVlessServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddShadowsocksServer = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +47,6 @@
             this.menuRemoveServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuRemoveDuplicateServer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCopyServer = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSetDefaultServer = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.menuMoveTop = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMoveUp = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,8 +64,8 @@
             this.menuExport2ServerConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExport2ShareUrl = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExport2SubContent = new System.Windows.Forms.ToolStripMenuItem();
-            this.qrCodeControl = new v2rayN.Forms.QRCodeControl();
             this.tsbServer = new System.Windows.Forms.ToolStripDropDownButton();
+            this.qrCodeControl = new v2rayN.Forms.QRCodeControl();
             this.notifyMain = new System.Windows.Forms.NotifyIcon(this.components);
             this.cmsMain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuSysAgentMode = new System.Windows.Forms.ToolStripMenuItem();
@@ -177,6 +178,8 @@
             // 
             this.cmsLv.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsLv.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuSetDefaultServer,
+            this.menuEditServer,
             this.menuAddVmessServer,
             this.menuAddVlessServer,
             this.menuAddShadowsocksServer,
@@ -189,7 +192,6 @@
             this.menuRemoveServer,
             this.menuRemoveDuplicateServer,
             this.menuCopyServer,
-            this.menuSetDefaultServer,
             this.toolStripSeparator3,
             this.menuMoveTop,
             this.menuMoveUp,
@@ -210,6 +212,18 @@
             this.cmsLv.Name = "cmsLv";
             this.cmsLv.OwnerItem = this.tsbServer;
             resources.ApplyResources(this.cmsLv, "cmsLv");
+            // 
+            // menuSetDefaultServer
+            // 
+            this.menuSetDefaultServer.Name = "menuSetDefaultServer";
+            resources.ApplyResources(this.menuSetDefaultServer, "menuSetDefaultServer");
+            this.menuSetDefaultServer.Click += new System.EventHandler(this.menuSetDefaultServer_Click);
+            // 
+            // menuEditServer
+            // 
+            this.menuEditServer.Name = "menuEditServer";
+            resources.ApplyResources(this.menuEditServer, "menuEditServer");
+            this.menuEditServer.Click += new System.EventHandler(this.menuEditServer_Click);
             // 
             // menuAddVmessServer
             // 
@@ -281,12 +295,6 @@
             this.menuCopyServer.Name = "menuCopyServer";
             resources.ApplyResources(this.menuCopyServer, "menuCopyServer");
             this.menuCopyServer.Click += new System.EventHandler(this.menuCopyServer_Click);
-            // 
-            // menuSetDefaultServer
-            // 
-            this.menuSetDefaultServer.Name = "menuSetDefaultServer";
-            resources.ApplyResources(this.menuSetDefaultServer, "menuSetDefaultServer");
-            this.menuSetDefaultServer.Click += new System.EventHandler(this.menuSetDefaultServer_Click);
             // 
             // toolStripSeparator3
             // 
@@ -387,17 +395,17 @@
             resources.ApplyResources(this.menuExport2SubContent, "menuExport2SubContent");
             this.menuExport2SubContent.Click += new System.EventHandler(this.menuExport2SubContent_Click);
             // 
-            // qrCodeControl
-            // 
-            resources.ApplyResources(this.qrCodeControl, "qrCodeControl");
-            this.qrCodeControl.Name = "qrCodeControl";
-            // 
             // tsbServer
             // 
             this.tsbServer.DropDown = this.cmsLv;
             this.tsbServer.Image = global::v2rayN.Properties.Resources.server;
             resources.ApplyResources(this.tsbServer, "tsbServer");
             this.tsbServer.Name = "tsbServer";
+            // 
+            // qrCodeControl
+            // 
+            resources.ApplyResources(this.qrCodeControl, "qrCodeControl");
+            this.qrCodeControl.Name = "qrCodeControl";
             // 
             // notifyMain
             // 
@@ -954,6 +962,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuAddVlessServer;
         private System.Windows.Forms.ToolStripMenuItem menuAddTrojanServer;
         private System.Windows.Forms.ToolStripMenuItem menuReloadHttp;
+        private System.Windows.Forms.ToolStripMenuItem menuEditServer;
     }
 }
 

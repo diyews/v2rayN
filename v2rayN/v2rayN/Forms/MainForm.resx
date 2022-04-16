@@ -128,6 +128,18 @@
   <metadata name="cmsLv.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>327, 17</value>
   </metadata>
+  <data name="menuSetDefaultServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 22</value>
+  </data>
+  <data name="menuSetDefaultServer.Text" xml:space="preserve">
+    <value>Set as active server (Enter)</value>
+  </data>
+  <data name="menuEditServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 22</value>
+  </data>
+  <data name="menuEditServer.Text" xml:space="preserve">
+    <value>Edit (E)</value>
+  </data>
   <data name="menuAddVmessServer.Size" type="System.Drawing.Size, System.Drawing">
     <value>355, 22</value>
   </data>
@@ -196,12 +208,6 @@
   </data>
   <data name="menuCopyServer.Text" xml:space="preserve">
     <value>Clone selected server</value>
-  </data>
-  <data name="menuSetDefaultServer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 22</value>
-  </data>
-  <data name="menuSetDefaultServer.Text" xml:space="preserve">
-    <value>Set as active server (Enter)</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>352, 6</value>
@@ -309,7 +315,7 @@
     <value>ImageAboveText</value>
   </data>
   <data name="cmsLv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>356, 600</value>
+    <value>356, 644</value>
   </data>
   <data name="&gt;&gt;cmsLv.Name" xml:space="preserve">
     <value>cmsLv</value>
@@ -534,7 +540,7 @@
     <value>Exit</value>
   </data>
   <data name="cmsMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 186</value>
+    <value>265, 164</value>
   </data>
   <data name="&gt;&gt;cmsMain.Name" xml:space="preserve">
     <value>cmsMain</value>
@@ -996,7 +1002,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>108</value>
+    <value>53</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
@@ -1009,6 +1015,18 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>v2rayN</value>
+  </data>
+  <data name="&gt;&gt;menuSetDefaultServer.Name" xml:space="preserve">
+    <value>menuSetDefaultServer</value>
+  </data>
+  <data name="&gt;&gt;menuSetDefaultServer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuEditServer.Name" xml:space="preserve">
+    <value>menuEditServer</value>
+  </data>
+  <data name="&gt;&gt;menuEditServer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuAddVmessServer.Name" xml:space="preserve">
     <value>menuAddVmessServer</value>
@@ -1080,12 +1098,6 @@
     <value>menuCopyServer</value>
   </data>
   <data name="&gt;&gt;menuCopyServer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuSetDefaultServer.Name" xml:space="preserve">
-    <value>menuSetDefaultServer</value>
-  </data>
-  <data name="&gt;&gt;menuSetDefaultServer.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">

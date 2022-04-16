@@ -470,6 +470,11 @@ namespace v2rayN.Forms
 
         private void lvServers_DoubleClick(object sender, EventArgs e)
         {
+            menuSetDefaultServer_Click(sender, e);
+        }
+
+        private void menuEditServer_Click(object sender, EventArgs e)
+        {
             int index = GetLvSelectedIndex();
             if (index < 0)
             {
@@ -564,6 +569,9 @@ namespace v2rayN.Forms
                         break;
                     case Keys.D:
                         menuMoveDown_Click(null, null);
+                        break;
+                    case Keys.E:
+                        menuEditServer_Click(null, null);
                         break;
                 }
             }
@@ -1572,6 +1580,6 @@ namespace v2rayN.Forms
 
         #endregion
 
-      
+
     }
 }
