@@ -94,10 +94,10 @@ namespace v2rayN.Forms
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            //if (this.WindowState == FormWindowState.Minimized)
-            //{
-            //    HideForm();
-            //}
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                HideForm();
+            }
             //else
             //{
 
