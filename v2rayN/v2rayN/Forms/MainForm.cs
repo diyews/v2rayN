@@ -76,9 +76,6 @@ namespace v2rayN.Forms
             RestoreUI();
 
             LoadV2ray();
-
-            HideForm();
-
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -270,6 +267,8 @@ namespace v2rayN.Forms
             }
             lvServers.EndUpdate();
 
+            LvServersEnsureVisible();
+
             //if (lvServers.Items.Count > 0)
             //{
             //    if (lvServers.Items.Count <= testConfigIndex)
@@ -405,6 +404,17 @@ namespace v2rayN.Forms
                 return;
             }
 
+        }
+
+        /// <summary>
+        /// 确保活动服务器在可视区域
+        /// </summary>
+        private void LvServersEnsureVisible()
+        {
+            if (config.index >= 0 && config.index < lvServers.Items.Count)
+            {
+                lvServers.EnsureVisible(config.index); // workaround
+            }
         }
         #endregion
 
@@ -1028,10 +1038,7 @@ namespace v2rayN.Forms
             this.ShowInTaskbar = true;
             //this.notifyIcon1.Visible = false;
             this.txtMsgBox.ScrollToCaret();
-            if (config.index >= 0 && config.index < lvServers.Items.Count)
-            {
-                lvServers.EnsureVisible(config.index); // workaround
-            }
+            LvServersEnsureVisible();
 
             SetVisibleCore(true);
         }
