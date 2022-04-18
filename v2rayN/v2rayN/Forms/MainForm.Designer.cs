@@ -80,6 +80,7 @@
             this.menuAddServers2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuScanScreen2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCopyPACUrl = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSwitchGlobalOrPAC = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReloadHttp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -423,6 +424,7 @@
             this.menuAddServers2,
             this.menuScanScreen2,
             this.menuCopyPACUrl,
+            this.menuSwitchGlobalOrPAC,
             this.menuReloadHttp,
             this.toolStripSeparator2,
             this.menuExit});
@@ -508,6 +510,12 @@
             this.menuCopyPACUrl.Name = "menuCopyPACUrl";
             resources.ApplyResources(this.menuCopyPACUrl, "menuCopyPACUrl");
             this.menuCopyPACUrl.Click += new System.EventHandler(this.menuCopyPACUrl_Click);
+            // 
+            // menuSwitchGlobalOrPAC
+            // 
+            this.menuSwitchGlobalOrPAC.Name = "menuSwitchGlobalOrPAC";
+            resources.ApplyResources(this.menuSwitchGlobalOrPAC, "menuSwitchGlobalOrPAC");
+            this.menuSwitchGlobalOrPAC.Click += new System.EventHandler(this.menuSwitchBetweenGlobalAndPAC);
             // 
             // menuReloadHttp
             // 
@@ -963,6 +971,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuAddTrojanServer;
         private System.Windows.Forms.ToolStripMenuItem menuReloadHttp;
         private System.Windows.Forms.ToolStripMenuItem menuEditServer;
+        private System.Windows.Forms.ToolStripMenuItem menuSwitchGlobalOrPAC;
     }
 }
 

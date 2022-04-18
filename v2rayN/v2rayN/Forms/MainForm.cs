@@ -1170,6 +1170,17 @@ namespace v2rayN.Forms
         {
             Utils.SetClipboardData(HttpProxyHandle.GetPacUrl());
         }
+        private void menuSwitchBetweenGlobalAndPAC(object sender, EventArgs e)
+        {
+            if (config.listenerType == ListenerType.GlobalHttp)
+            {
+                SetListenerType(ListenerType.GlobalPac);
+            }
+            else
+            {
+                SetListenerType(ListenerType.GlobalHttp);
+            }
+        }
 
         private void menuNotEnabledHttp_Click(object sender, EventArgs e)
         {
