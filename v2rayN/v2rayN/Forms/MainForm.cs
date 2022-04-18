@@ -555,7 +555,9 @@ namespace v2rayN.Forms
                         menuTcpingServer_Click(null, null);
                         break;
                     case Keys.R:
+                        SetAllItemsSelected(true);
                         menuRealPingServer_Click(null, null);
+                        SetAllItemsSelected(false);
                         break;
                     case Keys.S:
                         menuScanScreen_Click(null, null);
@@ -1163,9 +1165,17 @@ namespace v2rayN.Forms
         }
         private void menuSelectAll_Click(object sender, EventArgs e)
         {
+            SetAllItemsSelected(true);
+        }
+        private void menuDeselectAll_Click(object sender, EventArgs e)
+        {
+            SetAllItemsSelected(false);
+        }
+        private void SetAllItemsSelected(bool selected)
+        {
             foreach (ListViewItem item in lvServers.Items)
             {
-                item.Selected = true;
+                item.Selected = selected;
             }
         }
 
