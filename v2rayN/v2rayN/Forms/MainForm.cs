@@ -411,9 +411,16 @@ namespace v2rayN.Forms
         /// </summary>
         private void LvServersEnsureVisible()
         {
-            if (config.index >= 0 && config.index < lvServers.Items.Count)
+            var count = lvServers.Items.Count;
+            if (count == 0)
             {
-                lvServers.EnsureVisible(config.index); // workaround
+                return ;
+            }
+            var maxIndex = count - 1;
+            if (config.index >= 0 && config.index <= maxIndex)
+            {
+                var indexAfter = config.index + 5;
+                lvServers.EnsureVisible(indexAfter > maxIndex ? maxIndex : indexAfter); // workaround
             }
         }
         #endregion
