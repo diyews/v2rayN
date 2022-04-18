@@ -76,10 +76,12 @@
             this.menuKeepPAC = new System.Windows.Forms.ToolStripMenuItem();
             this.menuKeepNothing = new System.Windows.Forms.ToolStripMenuItem();
             this.menuKeepPACNothing = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuServers = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCopyPACUrl = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.menuAddServers2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuScanScreen2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCopyPACUrl = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuServers = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.menuSwitchGlobalOrPAC = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReloadHttp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -420,10 +422,12 @@
             resources.ApplyResources(this.cmsMain, "cmsMain");
             this.cmsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuSysAgentMode,
+            this.menuCopyPACUrl,
+            this.toolStripSeparator15,
             this.menuServers,
             this.menuAddServers2,
             this.menuScanScreen2,
-            this.menuCopyPACUrl,
+            this.toolStripSeparator14,
             this.menuSwitchGlobalOrPAC,
             this.menuReloadHttp,
             this.toolStripSeparator2,
@@ -488,10 +492,16 @@
             resources.ApplyResources(this.menuKeepPACNothing, "menuKeepPACNothing");
             this.menuKeepPACNothing.Click += new System.EventHandler(this.menuKeepPACNothing_Click);
             // 
-            // menuServers
+            // menuCopyPACUrl
             // 
-            this.menuServers.Name = "menuServers";
-            resources.ApplyResources(this.menuServers, "menuServers");
+            this.menuCopyPACUrl.Name = "menuCopyPACUrl";
+            resources.ApplyResources(this.menuCopyPACUrl, "menuCopyPACUrl");
+            this.menuCopyPACUrl.Click += new System.EventHandler(this.menuCopyPACUrl_Click);
+            // 
+            // toolStripSeparator15
+            // 
+            this.toolStripSeparator15.Name = "toolStripSeparator15";
+            resources.ApplyResources(this.toolStripSeparator15, "toolStripSeparator15");
             // 
             // menuAddServers2
             // 
@@ -505,11 +515,15 @@
             resources.ApplyResources(this.menuScanScreen2, "menuScanScreen2");
             this.menuScanScreen2.Click += new System.EventHandler(this.menuScanScreen_Click);
             // 
-            // menuCopyPACUrl
+            // menuServers
             // 
-            this.menuCopyPACUrl.Name = "menuCopyPACUrl";
-            resources.ApplyResources(this.menuCopyPACUrl, "menuCopyPACUrl");
-            this.menuCopyPACUrl.Click += new System.EventHandler(this.menuCopyPACUrl_Click);
+            this.menuServers.Name = "menuServers";
+            resources.ApplyResources(this.menuServers, "menuServers");
+            // 
+            // toolStripSeparator14
+            // 
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            resources.ApplyResources(this.toolStripSeparator14, "toolStripSeparator14");
             // 
             // menuSwitchGlobalOrPAC
             // 
@@ -972,6 +986,8 @@
         private System.Windows.Forms.ToolStripMenuItem menuReloadHttp;
         private System.Windows.Forms.ToolStripMenuItem menuEditServer;
         private System.Windows.Forms.ToolStripMenuItem menuSwitchGlobalOrPAC;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
     }
 }
 
