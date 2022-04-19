@@ -555,9 +555,7 @@ namespace v2rayN.Forms
                         menuTcpingServer_Click(null, null);
                         break;
                     case Keys.R:
-                        SetAllItemsSelected(true);
-                        menuRealPingServer_Click(null, null);
-                        SetAllItemsSelected(false);
+                        RealPingAll();
                         break;
                     case Keys.S:
                         menuScanScreen_Click(null, null);
@@ -1124,6 +1122,12 @@ namespace v2rayN.Forms
             }
         }
 
+        private void RealPingAll()
+        {
+            SetAllItemsSelected(true);
+            menuRealPingServer_Click(null, null);
+            SetAllItemsSelected(false);
+        }
         #endregion
 
         #region 移动服务器
@@ -1471,6 +1475,11 @@ namespace v2rayN.Forms
         private void tsbReloadHttp_Click(object sender, EventArgs e)
         {
             HttpProxyHandle.RestartHttpAgent(config, true);
+        }
+
+        private void tsbRealPing_Click(object sender, EventArgs e)
+        {
+            RealPingAll();
         }
         #endregion
 

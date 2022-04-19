@@ -415,6 +415,7 @@
     <None Include="Resources\sub.png" />
     <None Include="Resources\checkupdate.png" />
     <None Include="Resources\about.png" />
+    <None Include="Resources\connection_bars.png" />
     <Content Include="Resources\help.png" />
     <None Include="Resources\notify.png" />
     <Content Include="Resources\privoxy_conf.txt" />

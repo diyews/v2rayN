@@ -446,6 +446,27 @@
   <data name="cmsMain.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="cmsMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 198</value>
+  </data>
+  <data name="&gt;&gt;cmsMain.Name" xml:space="preserve">
+    <value>cmsMain</value>
+  </data>
+  <data name="&gt;&gt;cmsMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="notifyMain.Text" xml:space="preserve">
+    <value>v2rayN</value>
+  </data>
+  <data name="notifyMain.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="menuSysAgentMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 22</value>
+  </data>
+  <data name="menuSysAgentMode.Text" xml:space="preserve">
+    <value>Http proxy</value>
+  </data>
   <data name="menuNotEnabledHttp.Size" type="System.Drawing.Size, System.Drawing">
     <value>411, 22</value>
   </data>
@@ -487,12 +508,6 @@
   </data>
   <data name="menuKeepPACNothing.Text" xml:space="preserve">
     <value>Only open PAC and do nothing</value>
-  </data>
-  <data name="menuSysAgentMode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 22</value>
-  </data>
-  <data name="menuSysAgentMode.Text" xml:space="preserve">
-    <value>Http proxy</value>
   </data>
   <data name="menuCopyPACUrl.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 22</value>
@@ -551,21 +566,6 @@
   <data name="menuExit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="cmsMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 220</value>
-  </data>
-  <data name="&gt;&gt;cmsMain.Name" xml:space="preserve">
-    <value>cmsMain</value>
-  </data>
-  <data name="&gt;&gt;cmsMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="notifyMain.Text" xml:space="preserve">
-    <value>v2rayN</value>
-  </data>
-  <data name="notifyMain.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <metadata name="bgwScan.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>498, 17</value>
   </metadata>
@@ -595,6 +595,60 @@
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <metadata name="ssMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>228, 18</value>
+  </metadata>
+  <data name="&gt;&gt;txtMsgBox.Name" xml:space="preserve">
+    <value>txtMsgBox</value>
+  </data>
+  <data name="&gt;&gt;txtMsgBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtMsgBox.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtMsgBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ssMain.Name" xml:space="preserve">
+    <value>ssMain</value>
+  </data>
+  <data name="&gt;&gt;ssMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ssMain.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;ssMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 417</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>952, 176</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Informations</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="txtMsgBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -632,6 +686,30 @@
   <metadata name="ssMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>228, 18</value>
   </metadata>
+  <data name="ssMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 151</value>
+  </data>
+  <data name="ssMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>946, 22</value>
+  </data>
+  <data name="ssMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ssMain.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;ssMain.Name" xml:space="preserve">
+    <value>ssMain</value>
+  </data>
+  <data name="&gt;&gt;ssMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ssMain.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;ssMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="toolSslSocksPortLab.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 8pt</value>
   </data>
@@ -707,57 +785,6 @@
   <data name="toolSslBlank4.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
   </data>
-  <data name="ssMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 151</value>
-  </data>
-  <data name="ssMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>946, 22</value>
-  </data>
-  <data name="ssMain.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ssMain.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;ssMain.Name" xml:space="preserve">
-    <value>ssMain</value>
-  </data>
-  <data name="&gt;&gt;ssMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ssMain.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;ssMain.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 417</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 176</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Informations</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -787,18 +814,6 @@
   </metadata>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 56</value>
-  </data>
-  <data name="tsbSubSetting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
-  </data>
-  <data name="tsbSubSetting.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="tsbSubUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
-  </data>
-  <data name="tsbSubUpdate.Text" xml:space="preserve">
-    <value>Updates</value>
   </data>
   <data name="tsbSub.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -874,6 +889,90 @@
   <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 56</value>
   </data>
+  <data name="tsbCheckUpdate.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsbCheckUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 53</value>
+  </data>
+  <data name="tsbCheckUpdate.Text" xml:space="preserve">
+    <value>Check for updates</value>
+  </data>
+  <data name="tsbCheckUpdate.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 56</value>
+  </data>
+  <data name="tsbHelp.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsbHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 53</value>
+  </data>
+  <data name="tsbHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="tsbHelp.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="tsbReloadHttp.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsbReloadHttp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 53</value>
+  </data>
+  <data name="tsbReloadHttp.Text" xml:space="preserve">
+    <value>Restart Http</value>
+  </data>
+  <data name="tsbReloadHttp.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="tsbRealPing.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsbRealPing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 53</value>
+  </data>
+  <data name="tsbRealPing.Text" xml:space="preserve">
+    <value>Real delay</value>
+  </data>
+  <data name="tsbRealPing.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="tsMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tsMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>952, 56</value>
+  </data>
+  <data name="tsMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tsMain.Name" xml:space="preserve">
+    <value>tsMain</value>
+  </data>
+  <data name="&gt;&gt;tsMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tsMain.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tsbSubSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
+  </data>
+  <data name="tsbSubSetting.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="tsbSubUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
+  </data>
+  <data name="tsbSubUpdate.Text" xml:space="preserve">
+    <value>Updates</value>
+  </data>
   <data name="tsbCheckUpdateN.Size" type="System.Drawing.Size, System.Drawing">
     <value>393, 22</value>
   </data>
@@ -901,21 +1000,6 @@
   <data name="tsbCheckClearPACList.Text" xml:space="preserve">
     <value>Simplify PAC (need to set Core route)</value>
   </data>
-  <data name="tsbCheckUpdate.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="tsbCheckUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 53</value>
-  </data>
-  <data name="tsbCheckUpdate.Text" xml:space="preserve">
-    <value>Check for updates</value>
-  </data>
-  <data name="tsbCheckUpdate.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
-  </data>
-  <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 56</value>
-  </data>
   <data name="tsbAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 22</value>
   </data>
@@ -942,73 +1026,6 @@
   </data>
   <data name="tsbLanguageZhHans.Text" xml:space="preserve">
     <value>语言-[中文简体]</value>
-  </data>
-  <data name="tsbHelp.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="tsbHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 53</value>
-  </data>
-  <data name="tsbHelp.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="tsbHelp.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
-  </data>
-  <data name="tsbReloadHttp.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="tsbReloadHttp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 53</value>
-  </data>
-  <data name="tsbReloadHttp.Text" xml:space="preserve">
-    <value>Restart Http</value>
-  </data>
-  <data name="tsbReloadHttp.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
-  </data>
-  <data name="toolStripSeparator11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 56</value>
-  </data>
-  <data name="tsbClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAySURBVFhH7c6xDQAgCEVBRnVTHU2ZABuMxV3yOvJDAAA/
-        GqfZVG6X8mg1dfUAAPBQxAZd0SJruVXHWwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="tsbClose.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="tsbClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 53</value>
-  </data>
-  <data name="tsbClose.Text" xml:space="preserve">
-    <value> Close </value>
-  </data>
-  <data name="tsbClose.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
-  </data>
-  <data name="tsMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tsMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 56</value>
-  </data>
-  <data name="tsMain.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tsMain.Name" xml:space="preserve">
-    <value>tsMain</value>
-  </data>
-  <data name="&gt;&gt;tsMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tsMain.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1286,6 +1303,12 @@
   <data name="&gt;&gt;toolStripSeparator15.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;menuServers.Name" xml:space="preserve">
+    <value>menuServers</value>
+  </data>
+  <data name="&gt;&gt;menuServers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;menuAddServers2.Name" xml:space="preserve">
     <value>menuAddServers2</value>
   </data>
@@ -1296,12 +1319,6 @@
     <value>menuScanScreen2</value>
   </data>
   <data name="&gt;&gt;menuScanScreen2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuServers.Name" xml:space="preserve">
-    <value>menuServers</value>
-  </data>
-  <data name="&gt;&gt;menuServers.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator14.Name" xml:space="preserve">
@@ -1550,16 +1567,10 @@
   <data name="&gt;&gt;tsbReloadHttp.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator11.Name" xml:space="preserve">
-    <value>toolStripSeparator11</value>
+  <data name="&gt;&gt;tsbRealPing.Name" xml:space="preserve">
+    <value>tsbRealPing</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsbClose.Name" xml:space="preserve">
-    <value>tsbClose</value>
-  </data>
-  <data name="&gt;&gt;tsbClose.Type" xml:space="preserve">
+  <data name="&gt;&gt;tsbRealPing.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -64,8 +64,8 @@
             this.menuExport2ServerConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExport2ShareUrl = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExport2SubContent = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbServer = new System.Windows.Forms.ToolStripDropDownButton();
             this.qrCodeControl = new v2rayN.Forms.QRCodeControl();
+            this.tsbServer = new System.Windows.Forms.ToolStripDropDownButton();
             this.notifyMain = new System.Windows.Forms.NotifyIcon(this.components);
             this.cmsMain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuSysAgentMode = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,9 +78,9 @@
             this.menuKeepPACNothing = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCopyPACUrl = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
+            this.menuServers = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddServers2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuScanScreen2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuServers = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.menuSwitchGlobalOrPAC = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReloadHttp = new System.Windows.Forms.ToolStripMenuItem();
@@ -128,8 +128,7 @@
             this.tsbLanguageDef = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbLanguageZhHans = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbReloadHttp = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbClose = new System.Windows.Forms.ToolStripButton();
+            this.tsbRealPing = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
@@ -398,17 +397,17 @@
             resources.ApplyResources(this.menuExport2SubContent, "menuExport2SubContent");
             this.menuExport2SubContent.Click += new System.EventHandler(this.menuExport2SubContent_Click);
             // 
+            // qrCodeControl
+            // 
+            resources.ApplyResources(this.qrCodeControl, "qrCodeControl");
+            this.qrCodeControl.Name = "qrCodeControl";
+            // 
             // tsbServer
             // 
             this.tsbServer.DropDown = this.cmsLv;
             this.tsbServer.Image = global::v2rayN.Properties.Resources.server;
             resources.ApplyResources(this.tsbServer, "tsbServer");
             this.tsbServer.Name = "tsbServer";
-            // 
-            // qrCodeControl
-            // 
-            resources.ApplyResources(this.qrCodeControl, "qrCodeControl");
-            this.qrCodeControl.Name = "qrCodeControl";
             // 
             // notifyMain
             // 
@@ -503,6 +502,11 @@
             this.toolStripSeparator15.Name = "toolStripSeparator15";
             resources.ApplyResources(this.toolStripSeparator15, "toolStripSeparator15");
             // 
+            // menuServers
+            // 
+            this.menuServers.Name = "menuServers";
+            resources.ApplyResources(this.menuServers, "menuServers");
+            // 
             // menuAddServers2
             // 
             this.menuAddServers2.Name = "menuAddServers2";
@@ -514,11 +518,6 @@
             this.menuScanScreen2.Name = "menuScanScreen2";
             resources.ApplyResources(this.menuScanScreen2, "menuScanScreen2");
             this.menuScanScreen2.Click += new System.EventHandler(this.menuScanScreen_Click);
-            // 
-            // menuServers
-            // 
-            this.menuServers.Name = "menuServers";
-            resources.ApplyResources(this.menuServers, "menuServers");
             // 
             // toolStripSeparator14
             // 
@@ -677,8 +676,7 @@
             this.toolStripSeparator10,
             this.tsbHelp,
             this.tsbReloadHttp,
-            this.toolStripSeparator11,
-            this.tsbClose});
+            this.tsbRealPing});
             resources.ApplyResources(this.tsMain, "tsMain");
             this.tsMain.Name = "tsMain";
             this.tsMain.TabStop = true;
@@ -841,16 +839,12 @@
             this.tsbReloadHttp.Name = "tsbReloadHttp";
             this.tsbReloadHttp.Click += new System.EventHandler(this.tsbReloadHttp_Click);
             // 
-            // toolStripSeparator11
+            // tsbRealPing
             // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            resources.ApplyResources(this.toolStripSeparator11, "toolStripSeparator11");
-            // 
-            // tsbClose
-            // 
-            resources.ApplyResources(this.tsbClose, "tsbClose");
-            this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
+            this.tsbRealPing.Image = global::v2rayN.Properties.Resources.connection_bars;
+            resources.ApplyResources(this.tsbRealPing, "tsbRealPing");
+            this.tsbRealPing.Name = "tsbRealPing";
+            this.tsbRealPing.Click += new System.EventHandler(this.tsbRealPing_Click);
             // 
             // MainForm
             // 
@@ -910,7 +904,6 @@
         private System.Windows.Forms.ToolStrip tsMain;
         private System.Windows.Forms.ToolStripDropDownButton tsbServer;
         private System.Windows.Forms.ToolStripButton tsbOptionSetting;
-        private System.Windows.Forms.ToolStripButton tsbClose;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
@@ -938,7 +931,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuAddServers;
         private System.Windows.Forms.ToolStripMenuItem menuExport2ShareUrl;
         private System.Windows.Forms.ToolStripMenuItem menuSpeedServer;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripDropDownButton tsbHelp;
         private System.Windows.Forms.ToolStripMenuItem tsbAbout;
         private System.Windows.Forms.ToolStripMenuItem menuAddServers2;
@@ -988,6 +980,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuSwitchGlobalOrPAC;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
+        private System.Windows.Forms.ToolStripButton tsbRealPing;
     }
 }
 
