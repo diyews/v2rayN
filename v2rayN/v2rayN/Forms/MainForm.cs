@@ -554,9 +554,6 @@ namespace v2rayN.Forms
                     case Keys.O:
                         menuTcpingServer_Click(null, null);
                         break;
-                    case Keys.R:
-                        RealPingAll();
-                        break;
                     case Keys.S:
                         menuScanScreen_Click(null, null);
                         break;
@@ -589,6 +586,10 @@ namespace v2rayN.Forms
                         break;
                     case Keys.E:
                         menuEditServer_Click(null, null);
+                        break;
+                    case Keys.R:
+                        menuRealPingServer_Click(null, null);
+                        e.SuppressKeyPress = true;
                         break;
                 }
             }
