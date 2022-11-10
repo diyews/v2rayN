@@ -11,6 +11,7 @@ using v2rayN.Tool;
 using System.Diagnostics;
 using System.Drawing;
 using System.Net;
+using System.Linq;
 
 namespace v2rayN.Forms
 {
@@ -19,6 +20,8 @@ namespace v2rayN.Forms
         private V2rayHandler v2rayHandler;
         private List<int> lvSelecteds = new List<int>();
         private StatisticsHandler statistics = null;
+        private Timer realPingTimer = null;
+        SpeedtestLiveHandler speedtestLiveHandler;
 
         #region Window 事件
 
@@ -53,6 +56,11 @@ namespace v2rayN.Forms
             if (config.enableStatistics)
             {
                 statistics = new StatisticsHandler(config, UpdateStatisticsHandler);
+            }
+
+            if (true)
+            {
+                StartRealPingTimer();
             }
         }
 
@@ -414,7 +422,7 @@ namespace v2rayN.Forms
             var count = lvServers.Items.Count;
             if (count == 0)
             {
-                return ;
+                return;
             }
             var maxIndex = count - 1;
             if (config.index >= 0 && config.index <= maxIndex)
@@ -602,7 +610,7 @@ namespace v2rayN.Forms
 
         private void menuAddVlessServer_Click(object sender, EventArgs e)
         {
-            ShowServerForm((int)EConfigType.VLESS, -1);            
+            ShowServerForm((int)EConfigType.VLESS, -1);
         }
 
         private void menuRemoveServer_Click(object sender, EventArgs e)
@@ -884,13 +892,13 @@ namespace v2rayN.Forms
 
         private void menuAddShadowsocksServer_Click(object sender, EventArgs e)
         {
-            ShowServerForm((int)EConfigType.Shadowsocks, -1);             
+            ShowServerForm((int)EConfigType.Shadowsocks, -1);
             ShowForm();
         }
 
         private void menuAddSocksServer_Click(object sender, EventArgs e)
         {
-            ShowServerForm((int)EConfigType.Socks, -1);      
+            ShowServerForm((int)EConfigType.Socks, -1);
             ShowForm();
         }
 
@@ -980,6 +988,11 @@ namespace v2rayN.Forms
                 //this.txtMsgBox.AppendText(text);
                 ShowMsg(text);
             }
+        }
+
+        void AppendTextWithAsterisk(string text)
+        {
+            AppendText($"************************ {text} ************************");
         }
 
         /// <summary>
@@ -1128,6 +1141,105 @@ namespace v2rayN.Forms
             SetAllItemsSelected(true);
             menuRealPingServer_Click(null, null);
             SetAllItemsSelected(false);
+        }
+
+        private void StartRealPingTimer()
+        {
+            if (config.vmess.Count == 0)
+            {
+                realPingTimer?.Stop();
+                return;
+            }
+            if (realPingTimer != null)
+            {
+                realPingTimer.Start();
+                return;
+            }
+            realPingTimer = new Timer
+            {
+                Interval = 2000
+            };
+            speedtestLiveHandler = new SpeedtestLiveHandler(
+              ref config, ref v2rayHandler, new List<int> {
+                config.index
+              },
+              UpdateSpeedtestHandler);
+            realPingTimer.Tick += (s, e) => {
+                realPingTimer.Interval = 60000;
+                speedtestLiveHandler.RunSpeedtest(
+                  new List<int> {
+                    config.index
+                  },
+                  () => {
+                      bool alive = config.vmess[config.index].testResult.Contains("ms");
+                      if (alive)
+                      {
+                          AppendTextWithAsterisk("连接正常");
+                          Invoke((MethodInvoker)delegate
+                          {
+                              realPingTimer.Start();
+                          });
+                      }
+                      else
+                      {
+                          AppendTextWithAsterisk($"连接超时: {config.vmess[config.index].remarks}");
+
+                          speedtestLiveHandler.RunSpeedtest(
+                            config.vmess.Select((x, i) => i).ToList(),
+                            () => {
+                                if (config.vmess[config.index].testResult.Contains("ms"))
+                                {
+                                    /* 如果再次检测时当前服务器可用, 跳过自动选择 */
+                                    AppendTextWithAsterisk("连接正常");
+                                }
+                                else
+                                {
+                                    int itemIndex = config.vmess.FindIndex(x => x.remarks.Contains("台湾") && x.testResult.Contains("ms"));
+
+                                    if (itemIndex == -1)
+                                    {
+                                        itemIndex = config.vmess.FindIndex(x => x.remarks.Contains("新加坡") && x.testResult.Contains("ms"));
+                                    }
+                                    if (itemIndex == -1)
+                                    {
+                                        itemIndex = config.vmess.FindIndex(x => x.remarks.Contains("日本") && x.testResult.Contains("ms"));
+                                    }
+                                    if (itemIndex == -1)
+                                    {
+                                        itemIndex = config.vmess.FindIndex(x => x.remarks.Contains("香港") && x.testResult.Contains("ms"));
+                                    }
+                                    if (itemIndex == -1)
+                                    {
+                                        itemIndex = config.vmess.FindIndex(x => x.testResult.Contains("ms"));
+                                    }
+
+                                    if (itemIndex != -1)
+                                    {
+                                        lvServers.Invoke((MethodInvoker)delegate
+                                        {
+                                            lvServers.Items[itemIndex].Selected = true;
+                                            menuSetDefaultServer_Click(null, null);
+                                            AppendTextWithAsterisk($"自动选择服务器: {config.vmess[itemIndex].remarks}");
+                                        });
+                                    }
+                                    else
+                                    {
+                                        AppendTextWithAsterisk("无可用服务器");
+                                    }
+                                }
+
+                                Invoke((MethodInvoker)delegate
+                                {
+                                    realPingTimer.Start();
+                                });
+                            }
+                           );
+                      }
+                  }
+                );
+                realPingTimer.Stop();
+            };
+            realPingTimer.Start();
         }
         #endregion
 
@@ -1481,6 +1593,15 @@ namespace v2rayN.Forms
         private void tsbRealPing_Click(object sender, EventArgs e)
         {
             RealPingAll();
+        }
+
+        private void tsbRestartReal_Click(object sender, EventArgs e)
+        {
+            speedtestLiveHandler?.StopHandler();
+            realPingTimer?.Stop();
+            realPingTimer = null;
+            speedtestLiveHandler = null;
+            StartRealPingTimer();
         }
         #endregion
 

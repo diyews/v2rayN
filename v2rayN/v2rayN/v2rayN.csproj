@@ -163,6 +163,7 @@
     </Compile>
     <Compile Include="Handler\MainFormHandler.cs" />
     <Compile Include="Handler\SpeedtestHandler.cs" />
+    <Compile Include="Handler\SpeedtestLiveHandler.cs" />
     <Compile Include="Handler\StatisticsHandler.cs" />
     <Compile Include="Handler\DownloadHandle.cs" />
     <Compile Include="Base\HttpWebServer.cs" />

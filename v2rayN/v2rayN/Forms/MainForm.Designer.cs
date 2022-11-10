@@ -129,6 +129,7 @@
             this.tsbLanguageZhHans = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbReloadHttp = new System.Windows.Forms.ToolStripButton();
             this.tsbRealPing = new System.Windows.Forms.ToolStripButton();
+            this.tsbRestartReal = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
@@ -676,7 +677,8 @@
             this.toolStripSeparator10,
             this.tsbHelp,
             this.tsbReloadHttp,
-            this.tsbRealPing});
+            this.tsbRealPing,
+            this.tsbRestartReal});
             resources.ApplyResources(this.tsMain, "tsMain");
             this.tsMain.Name = "tsMain";
             this.tsMain.TabStop = true;
@@ -846,6 +848,13 @@
             this.tsbRealPing.Name = "tsbRealPing";
             this.tsbRealPing.Click += new System.EventHandler(this.tsbRealPing_Click);
             // 
+            // tsbRestartReal
+            // 
+            this.tsbRestartReal.Image = global::v2rayN.Properties.Resources.restart;
+            resources.ApplyResources(this.tsbRestartReal, "tsbRestartReal");
+            this.tsbRestartReal.Name = "tsbRestartReal";
+            this.tsbRestartReal.Click += new System.EventHandler(this.tsbRestartReal_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -981,6 +990,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
         private System.Windows.Forms.ToolStripButton tsbRealPing;
+        private System.Windows.Forms.ToolStripButton tsbRestartReal;
     }
 }
 
