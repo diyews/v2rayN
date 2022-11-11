@@ -39,6 +39,10 @@ namespace v2rayN.Forms
             //Mux
             chkmuxEnabled.Checked = config.muxEnabled;
 
+            //自动检测可用服务器
+            chkAutoDetectLiveServer.Checked = config.autoDetectLiveServer;
+            txtLiveServerMatch.Text = config.autoDetectLiveServerMatch;
+
             //本地监听
             if (config.inbound.Count > 0)
             {
@@ -264,6 +268,10 @@ namespace v2rayN.Forms
 
             //remoteDNS
             config.remoteDNS = txtremoteDNS.Text.TrimEx();
+
+            //自动检测可用服务器
+            config.autoDetectLiveServer = chkAutoDetectLiveServer.Checked;
+            config.autoDetectLiveServerMatch = txtLiveServerMatch.Text.TrimEx();
 
             config.listenerType = (ListenerType)Enum.ToObject(typeof(ListenerType), cmblistenerType.SelectedIndex);
 

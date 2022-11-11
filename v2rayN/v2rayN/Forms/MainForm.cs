@@ -793,6 +793,7 @@ namespace v2rayN.Forms
                 RefreshServers();
                 LoadV2ray();
                 HttpProxyHandle.RestartHttpAgent(config, true);
+                tsbRestartReal_Click(null, null);
             }
         }
 
@@ -1145,6 +1146,10 @@ namespace v2rayN.Forms
 
         private void StartRealPingTimer()
         {
+            if (!config.autoDetectLiveServer || Utils.IsNullOrEmpty(config.autoDetectLiveServerMatch))
+            {
+                return;
+            }
             if (config.vmess.Count == 0)
             {
                 realPingTimer?.Stop();
@@ -1155,6 +1160,13 @@ namespace v2rayN.Forms
                 realPingTimer.Start();
                 return;
             }
+
+            var serverMatchList = Utils.String2List(config.autoDetectLiveServerMatch).Select(x => x.TrimEx()).ToList();
+            if (!serverMatchList.Any())
+            {
+                return;
+            }
+
             realPingTimer = new Timer
             {
                 Interval = 2000
@@ -1194,24 +1206,14 @@ namespace v2rayN.Forms
                                 }
                                 else
                                 {
-                                    int itemIndex = config.vmess.FindIndex(x => x.remarks.Contains("台湾") && x.testResult.Contains("ms"));
+                                    int itemIndex = -1;
 
-                                    if (itemIndex == -1)
+                                    serverMatchList.Any(serverStr =>
                                     {
-                                        itemIndex = config.vmess.FindIndex(x => x.remarks.Contains("新加坡") && x.testResult.Contains("ms"));
-                                    }
-                                    if (itemIndex == -1)
-                                    {
-                                        itemIndex = config.vmess.FindIndex(x => x.remarks.Contains("日本") && x.testResult.Contains("ms"));
-                                    }
-                                    if (itemIndex == -1)
-                                    {
-                                        itemIndex = config.vmess.FindIndex(x => x.remarks.Contains("香港") && x.testResult.Contains("ms"));
-                                    }
-                                    if (itemIndex == -1)
-                                    {
-                                        itemIndex = config.vmess.FindIndex(x => x.testResult.Contains("ms"));
-                                    }
+                                        itemIndex = config.vmess.FindIndex(x => x.remarks.Contains(serverStr) && x.testResult.Contains("ms"));
+                                        return itemIndex != -1;
+                                    });
+
 
                                     if (itemIndex != -1)
                                     {

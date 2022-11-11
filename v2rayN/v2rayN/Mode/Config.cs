@@ -61,6 +61,22 @@ namespace v2rayN.Mode
         }
 
         /// <summary>
+        /// 自动检测可用服务器
+        /// </summary>
+        public bool autoDetectLiveServer
+        {
+            get; set ;
+        }
+
+        /// <summary>
+        /// 自动检测可用服务器匹配
+        /// </summary>
+        public string autoDetectLiveServerMatch
+        {
+            get; set;
+        }
+
+        /// <summary>
         /// 域名解析策略
         /// </summary>
         public string domainStrategy

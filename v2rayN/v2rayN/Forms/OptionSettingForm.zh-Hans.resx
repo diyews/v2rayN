@@ -375,4 +375,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>参数设置</value>
   </data>
+  <data name="chkAutoDetectLiveServer.Text" xml:space="preserve">
+    <value>自动检测可用服务器</value>
+  </data>
 </root>
